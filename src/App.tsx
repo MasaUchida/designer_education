@@ -10,7 +10,6 @@ function App() {
     return alert("松戸だよ");
   };
   const fukuiTest = () => {
-    //return alert("福井だよ");
     console.log(document.querySelector("#button-target"));
     console.log(document.querySelector("#button-target")?.classList.value);
   };
