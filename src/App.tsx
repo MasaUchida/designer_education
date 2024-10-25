@@ -10,18 +10,15 @@ function App() {
     return alert("松戸だよ");
   };
   const fukuiTest = () => {
-    return alert("福井だよ");
+    //return alert("福井だよ");
+    console.log(document.querySelector("#button-target"));
+    console.log(document.querySelector("#button-target")?.classList.value);
   };
 
   return (
     <main>
-      <div className="p-6 flex flex-col items-center">
-        <h1 className="text-2xl font-bold pb-4">コンポーネントの作り方教材</h1>
-        <div className="flex flex-col gap-2 pb-8">
-          <Button label="うちだのボタンだよ" clickHandler={uchidaTest} />
-          <Button label="まつどのボタンだよ" clickHandler={matsudoTest} />
-          <Button label="ふくいのボタンだよ" clickHandler={fukuiTest} />
-        </div>
+      <div className="p-8 flex flex-col items-center">
+        <h1 className="text-2xl font-bold pb-8">コンポーネントの作り方教材</h1>
         <div className="flex gap-4 pb-6">
           <Card
             imageURL="URLってことで"
@@ -37,8 +34,13 @@ function App() {
           />
           <Card imageURL="URLってことで" title="なんもなし" />
         </div>
-        <div>
+        <div className="pb-8">
           <StateSample />
+        </div>
+        <div className="flex flex-col gap-2 pb-8">
+          <Button label="うちだのボタンだよ" clickHandler={uchidaTest} />
+          <Button label="まつどのボタンだよ" clickHandler={matsudoTest} />
+          <Button label="ふくいのボタンだよ" clickHandler={fukuiTest} />
         </div>
       </div>
     </main>
